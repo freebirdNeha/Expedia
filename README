@@ -1,0 +1,58 @@
+INSTRUCTIONS
+============
+
+Inital Set-up 
+--------------
+In order to build WeatherDisplayProject you will need the following applications:
+
+* Java JDK 6 (http://www.oracle.com/technetwork/java/javase/downloads/index.html) or above.
+* Apache Maven 3.x (http://maven.apache.org/)
+* Apache Tomcat 7  (http://tomcat.apache.org/download-70.cgi)
+
+
+Enable the manager application by editing /conf/tomcat-users.xml and adding the following:
+
+<tomcat-users>
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<user username="managerGui" password="manager" roles="manager-gui"/>
+<user username="manager" password="manager" roles="manager-script"/> 
+</tomcat-users>
+
+
+Add settings.xml under C:\Users\{name}\.m2: 
+
+<settings>
+    <servers>
+        <server>
+            <id>my-tomcat</id>
+            <username>manager</username>
+            <password>manager</password>
+        </server>
+    </servers>
+</settings>
+
+
+Clone of Repository 
+---------------------
+To clone the WaveMaker repository, use git clone:
+
+git clone https://github.com/freebirdNeha/Expedia.git
+
+ 
+Run the Project 
+----------------
+
+To build the complete WeatherDisplayProject, run the below command under WeatherDisplayProject directory.
+
+mvn install -Dmaven.test.skip=true
+
+mvn clean
+
+mvn package
+
+mvn tomcat7:run-war
+
+(last command starts the tomcat server and executes the project)
+
+Use the deployed application http://localhost:8080/WeatherDisplayProject/
