@@ -1,0 +1,4 @@
+com\weather\api\WeatherRequest.class
+com\weather\service\WeatherService.class
+com\weather\api\WeatherResponse.class
+com\weather\controller\WeatherController.class

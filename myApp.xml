@@ -1,0 +1,5 @@
+<context path="/WeatherDisplayProject" reloadable="false">
+  <!-- some  envrionment variables -->
+  <environment name="nodeId" override="false" type="java.lang.String" value="node01">
+  </environment>
+</context>
